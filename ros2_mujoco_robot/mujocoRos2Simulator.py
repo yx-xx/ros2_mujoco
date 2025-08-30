@@ -18,7 +18,7 @@ class MujocoRos2Simulator(Node):
     """
     
     def __init__(self):
-        super().__init__('robot_controller')
+        super().__init__('mujocoRos2Simulator')
         
         # 初始化参数
         self.declare_parameter('joint_names', ['joint1', 'joint2', 'joint3', 'joint4', 'joint5', 'joint6'])
