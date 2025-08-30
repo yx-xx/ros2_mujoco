@@ -48,14 +48,14 @@ source install/setup.bash
 ### 3. 启动仿真
 
 ```bash
-ros2 launch ros2_mujoco_robot simple_robot.launch.py
+ros2 launch ros2_mujoco_robot robot.launch.py
 ```
 
 ### 4. 运行测试
 
 ```bash
 # 在另一个终端
-ros2 run ros2_mujoco_robot simple_test
+ros2 run ros2_mujoco_robot test
 ```
 
 ## 控制接口
@@ -167,14 +167,14 @@ ros2 topic list
 ```
 ros2_mujoco_robot/
 ├── ros2_mujoco_robot/
-│   ├── simple_robot_controller.py    # 主控制器
-│   └── simple_test.py               # 测试脚本
+│   ├── robot_controller.py          # 主控制器
+│   └── test.py                     # 测试脚本
 ├── launch/
-│   └── simple_robot.launch.py       # 启动文件
+│   └── robot.launch.py             # 启动文件
 ├── models/
-│   └── simple_robot.xml             # 机器人模型
+│   └── README.md                   # 模型说明文件
 └── scripts/
-    └── simple_test.py               # 测试脚本
+    └── test.py                     # 测试脚本
 ```
 
 ## 许可证

@@ -30,11 +30,11 @@ def generate_launch_description():
     control_rate = LaunchConfiguration('control_rate')
     sim_rate = LaunchConfiguration('sim_rate')
     
-    # 简化机器人控制器节点
-    simple_controller_node = Node(
+    # 机器人控制器节点
+    robot_controller_node = Node(
         package='ros2_mujoco_robot',
-        executable='simple_robot_controller',
-        name='simple_robot_controller',
+        executable='robot_controller',
+        name='robot_controller',
         output='screen',
         parameters=[{
             'use_sim_time': use_sim_time,
@@ -65,7 +65,7 @@ def generate_launch_description():
     ld.add_action(sim_rate_arg)
     
     # 添加节点
-    ld.add_action(simple_controller_node)
+    ld.add_action(robot_controller_node)
     ld.add_action(joint_state_publisher_node)
     
     return ld 

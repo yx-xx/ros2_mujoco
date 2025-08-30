@@ -8,14 +8,14 @@ import math
 
 from std_msgs.msg import Float64MultiArray
  
-class SimpleTestController(Node):
+class TestController(Node):
     """
-    简化的测试控制器
+    测试控制器
     测试关节角度、速度、扭矩控制
     """
     
     def __init__(self):
-        super().__init__('simple_test_controller')
+        super().__init__('test_controller')
         
         # 关节名称
         self.joint_names = ['joint1', 'joint2', 'joint3', 'joint4', 'joint5', 'joint6']
@@ -34,7 +34,7 @@ class SimpleTestController(Node):
         self.test_counter = 0
         self.test_timer = self.create_timer(5.0, self.run_test)
         
-        self.get_logger().info('简化测试控制器已启动')
+        self.get_logger().info('测试控制器已启动')
     
     def run_test(self):
         """运行测试"""
@@ -92,7 +92,7 @@ class SimpleTestController(Node):
 def main(args=None):
     rclpy.init(args=args)
     
-    tester = SimpleTestController()
+    tester = TestController()
     
     try:
         rclpy.spin(tester)

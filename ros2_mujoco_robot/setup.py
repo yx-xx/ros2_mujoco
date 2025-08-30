@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'simple_robot_controller = ros2_mujoco_robot.simple_robot_controller:main',
-            'simple_test = ros2_mujoco_robot.simple_test:main',
+            'robot_controller = ros2_mujoco_robot.robot_controller:main',
+            'test = ros2_mujoco_robot.test:main',
         ],
     },
 ) 
